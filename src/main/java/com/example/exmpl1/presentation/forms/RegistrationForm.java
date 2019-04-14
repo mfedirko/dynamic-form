@@ -1,5 +1,6 @@
 package com.example.exmpl1.presentation.forms;
 
+import com.example.exmpl1.entity.User;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Pattern;
@@ -16,6 +17,23 @@ public class RegistrationForm extends BaseForm {
                 {"city","stateProvince","country"},
                 {"hasReadTermsAndConditions"}
         };
+    }
+
+    public User toUser(){
+        User u = new User();
+        u.setAddressLine1(addressLine1);
+        u.setAddressLine2(addressLine2);
+        u.setAptNumber(aptNumber);
+        u.setCity(city);
+        u.setCountry(country);
+        u.setEmail(emailAddress);
+        u.setPostalCode(zipCode);
+        u.setStateProvince(stateProvince);
+
+        u.setFirstName(firstName);
+        u.setLastName(lastName == null ? null : lastName.toString());
+        return u;
+
     }
 
     private static final List<String> REQUIRED_FIELDS = Arrays.asList("emailAddress","username","addressLine1","city","zipCode","stateProvince","country","hasReadTermsAndConditions","password");
