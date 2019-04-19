@@ -1,6 +1,6 @@
 package com.example.exmpl1.entity;
 
-import com.example.exmpl1.audit.Auditable;
+import com.example.exmpl1.entity.audit.Auditable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -8,7 +8,7 @@ import org.hibernate.envers.Audited;
 
 @Entity
 @Audited
-@Table(name = "USR")
+@Table(name = "usr")
 public class User extends Auditable{
 
     @Column(name = "USR_NM")

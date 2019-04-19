@@ -32,6 +32,8 @@ public class RegistrationForm extends BaseForm {
 
         u.setFirstName(firstName);
         u.setLastName(lastName == null ? null : lastName.toString());
+        u.setUsername(username);
+        u.setPasswd(password);
         return u;
 
     }

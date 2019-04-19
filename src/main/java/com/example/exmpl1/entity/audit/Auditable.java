@@ -1,4 +1,4 @@
-package com.example.exmpl1.audit;
+package com.example.exmpl1.entity.audit;
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import static javax.persistence.TemporalType.TIMESTAMP;
-import org.hibernate.annotations.UpdateTimestamp;
+
 import org.hibernate.envers.Audited;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
